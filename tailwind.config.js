@@ -7,10 +7,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        beige: {
-          DEFAULT: '#D4B896',
-          light: '#E8DCC4',
-          dark: '#B8956A',
+        coffee: {
+          DEFAULT: '#6F4E37',
+          light: '#8B6F47',
+          dark: '#4A2F1A',
+          cream: '#D4B896',
+          roast: '#3E2723',
+        },
+        coorg: {
+          DEFAULT: '#2D5016',
+          light: '#4A7C2A',
+          dark: '#1A3009',
         },
         brown: {
           DEFAULT: '#6B4423',

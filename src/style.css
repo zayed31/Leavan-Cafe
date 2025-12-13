@@ -7,9 +7,13 @@
 
 @layer base {
 :root {
-    --color-beige: #D4B896;
-    --color-beige-light: #E8DCC4;
-    --color-beige-dark: #B8956A;
+    --color-coffee: #6F4E37;
+    --color-coffee-light: #8B6F47;
+    --color-coffee-dark: #4A2F1A;
+    --color-coffee-cream: #D4B896;
+    --color-coffee-roast: #3E2723;
+    --color-coorg: #2D5016;
+    --color-coorg-light: #4A7C2A;
     --color-brown: #6B4423;
     --color-brown-dark: #4A2F1A;
     --color-off-white: #FAF8F5;
@@ -40,7 +44,7 @@ body {
   /* Navigation Enhancements */
   #navbar {
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(212, 184, 150, 0.1);
+    border-bottom: 1px solid rgba(111, 78, 55, 0.1);
   }
 
   .nav-link::after {
@@ -50,7 +54,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: #B8956A;
+    background: var(--color-coffee-dark);
     transition: width 0.3s ease;
   }
 
@@ -78,28 +82,28 @@ body {
     transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
-  /* Menu Card Styles */
-  .menu-card {
+  /* Product Card Styles */
+  .product-card {
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
-  .menu-card:hover {
+  .product-card:hover {
     transform: translateY(-8px) scale(1.02);
   }
 
-  /* Menu Carousel */
-  .menu-carousel-wrapper {
+  /* Products Carousel */
+  .products-carousel-wrapper {
     position: relative;
     width: 100%;
   }
 
-  .menu-carousel {
+  .products-carousel {
     will-change: transform;
   }
 
   /* Smooth scrolling for carousel */
-  #menu-carousel {
-  display: flex;
+  #products-carousel {
+    display: flex;
     gap: 2rem;
   }
 
@@ -273,9 +277,9 @@ body {
     position: relative;
     background: linear-gradient(
       90deg,
-      var(--color-beige-light) 0%,
-      #f0e6d6 50%,
-      var(--color-beige-light) 100%
+      var(--color-coffee-cream) 0%,
+      #e8dcc4 50%,
+      var(--color-coffee-cream) 100%
     );
     background-size: 200% 100%;
     animation: shimmer 2s infinite;
@@ -291,14 +295,14 @@ body {
   }
 }
 
-/* Selection Color */
+  /* Selection Color */
 ::selection {
-  background: var(--color-beige);
+  background: var(--color-coffee-cream);
   color: #1A1A1A;
 }
 
 ::-moz-selection {
-  background: var(--color-beige);
+  background: var(--color-coffee-cream);
   color: #1A1A1A;
 }
 
@@ -312,12 +316,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-beige);
+  background: var(--color-coffee);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-beige-dark);
+  background: var(--color-coffee-dark);
 }
 
 /* Responsive Design */
@@ -326,10 +330,11 @@ body {
     font-size: 3.5rem !important;
   }
   
-  .menu-title,
+  .products-title,
   .gallery-title,
   .testimonial-title,
-  .visit-title {
+  .visit-title,
+  .learn-title {
     font-size: 2.5rem !important;
   }
   
